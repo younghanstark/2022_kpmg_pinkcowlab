@@ -15,7 +15,7 @@ router.get('/:inputString', function(req, res) {
         if (err) throw err;
         res.status(200).json (
             {
-                "reversed": results[0]
+                "result": results[0]
             }
         );
     });
