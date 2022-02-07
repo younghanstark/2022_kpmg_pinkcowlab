@@ -11,7 +11,7 @@ var options = {
 router.get('/:inputString', function(req, res) {
     var inputString = req.params.inputString;
     options.args[0] = inputString;
-    PythonShell.run('test.py', options, function(err, results) {
+    PythonShell.run('api.py', options, function(err, results) {
         if (err) throw err;
         res.status(200).json (
             {

@@ -11,4 +11,6 @@ $ pip install psutil
 $ pip install scipy
 $ pip install scikit-learn
 $ pip install soynlp
+$ pip install openpyxl
+$ pip install pandas
 ```
