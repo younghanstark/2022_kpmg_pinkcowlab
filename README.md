@@ -20,7 +20,7 @@ $ pip install pandas
 
 ## How to Put Datasets
 > Datasets: List of brandnames that you wanna detect in random strings
-1. Make Excel(.xlsx) file that containing data of brandnames
+1. Make Excel(.xlsx) file that containing data of brandnames. (Make it into same format with previous files!)
 2. Put it to /core/test_data
 3. Add that filename to the list 'file_list' in make_scores.py like below(Do not include .xlsx into it!):
     ```python
