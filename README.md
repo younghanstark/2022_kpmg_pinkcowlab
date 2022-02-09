@@ -5,7 +5,7 @@
 This is an API which gets core brandname from random merchant name of credit card log. We're gonna use this API to automatically calculate people's available incentive based on their credit card log.
 
 ## API Base URL (Only during the Competition)
-[http://20.194.102.148:3000/api/투썸플레이스신촌](http://20.194.102.148:3000/투썸플레이스신촌)
+[http://20.194.102.148:3000/api/투썸플레이스신촌](http://20.194.102.148:3000/api/투썸플레이스신촌)
 
 ## Local Requirements
 ```shell
