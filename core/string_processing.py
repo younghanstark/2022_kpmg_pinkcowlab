@@ -1,16 +1,15 @@
-import read_data as rd
+import pickle
 from soynlp.tokenizer import MaxScoreTokenizer
 
-data = rd.read_data('purchase_data_7Feb22')
-scores = {}
-for pair in data.values:
-    scores[pair[1]] = 1.0
-tokenizer = MaxScoreTokenizer(scores=scores)
-
 def get_core(string):
-    tokens = tokenizer.tokenize(string)
-    for token in tokens:
-        if token in scores:
-            return token
-    return "noun extractor"
-
+    try:
+        with open('../core/scores_dict.pkl', 'rb') as f:
+            scores = pickle.load(f)
+            tokenizer = MaxScoreTokenizer(scores=scores)
+            tokens = tokenizer.tokenize(string)
+            for token in tokens:
+                if token in scores:
+                    return token
+            return "Failed to get core"
+    except Exception as e:
+        return e
