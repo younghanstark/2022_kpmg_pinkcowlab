@@ -6,7 +6,7 @@ path = os.path.dirname(os.path.realpath(__file__))
 
 def get_core(string):
     try:
-        with open(path + '\scores_dict.pkl', 'rb') as f:
+        with open(path + '/scores_dict.pkl', 'rb') as f:
             scores = pickle.load(f)
             tokenizer = MaxScoreTokenizer(scores=scores)
             tokens = tokenizer.tokenize(string, flatten=False)
