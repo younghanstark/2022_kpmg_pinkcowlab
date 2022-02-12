@@ -1,4 +1,4 @@
-# CO2gather
+# CO2gather: Automatic CO2 Saving Incentive Manegement Service
 [2022 KPMG Ideathon Challenge] Pink Cow Lab. - "CO2gather"
 
 ## Overview
@@ -7,16 +7,20 @@ This is an API which gets core brandname from random merchant name of credit car
 ## API Base URL (Only during the Competition)
 [http://20.194.102.148:3000/api/투썸플레이스신촌](http://20.194.102.148:3000/api/투썸플레이스신촌)
 
+You can put the string that you wanna know the core brandname instead of '투썸플레이스신촌'.
+
 ## Local Requirements
-```shell
-$ pip install numpy
-$ pip install psutil
-$ pip install scipy
-$ pip install scikit-learn
-$ pip install soynlp
-$ pip install openpyxl
-$ pip install pandas
-```
+- Node.js, npm
+- Python 3, Some Python packages:
+    ```shell
+    $ pip install numpy
+    $ pip install psutil
+    $ pip install scipy
+    $ pip install scikit-learn
+    $ pip install soynlp
+    $ pip install openpyxl
+    $ pip install pandas
+    ```
 
 ## How to Put Datasets
 > Datasets: List of brandnames that you wanna detect in random strings
