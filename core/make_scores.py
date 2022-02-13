@@ -9,7 +9,7 @@ path = os.path.dirname(os.path.realpath(__file__))
 if os.path.exists(path+'/test_data/raw.txt'):
     os.remove(path+'/test_data/raw.txt')
 
-file_list = ['purchase_data_12Feb22']
+file_list = ['purchase_data_12Feb22_1', 'purchase_data_12Feb22_2', 'purchase_data_13Feb22_1']
 f = open(path+'/test_data/raw.txt', 'a', encoding='utf8')
 for file_name in file_list:
     data_frame = rd.read_data(file_name)
