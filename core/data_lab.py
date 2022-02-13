@@ -11,7 +11,6 @@ for file_name in file_list:
 
     for pair in data.values:
         tokenized = sp.get_core(pair[0])
-        # print(tokenized)
         if pair[1] != tokenized[0][0]:
             print(tokenized)
             print("For string", pair[0], "Expected", pair[1], "And got", tokenized[0][0])

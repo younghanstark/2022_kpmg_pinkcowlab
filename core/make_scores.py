@@ -14,7 +14,7 @@ f = open(path+'/test_data/raw.txt', 'a', encoding='utf8')
 for file_name in file_list:
     data_frame = rd.read_data(file_name)
     for pair in data_frame.values:
-        f.write(pair[1]+' ')
+        f.write(pair[1]+"  ")
 f.close()
 
 corpus = DoublespaceLineCorpus(path+'/test_data/raw.txt')
