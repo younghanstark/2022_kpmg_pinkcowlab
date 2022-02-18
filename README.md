@@ -10,7 +10,7 @@ This is an API which gets core brandname from random merchant name of credit car
 You can put the string that you wanna know the core brandname instead of '투썸플레이스신촌'.
 
 ## Local Requirements
-- Node.js, npm
+- Node.js, npm (Uses express.js and python-shell but it considers dependencies)
 - Python 3, Some Python packages:
     ```shell
     $ pip install numpy
@@ -22,6 +22,15 @@ You can put the string that you wanna know the core brandname instead of '투썸
     $ pip install pandas
     ```
 
+## How to Run
+1. Clone this repository.
+2. Satisfy every requirements.
+3. Go to local repository folder, run:
+    ```shell
+    $ cd myapp
+    $ nohup npm start &
+    ```
+
 ## How to Put Datasets
 > Datasets: List of brandnames that you wanna detect in random strings
 1. Make Excel(.xlsx) file that containing data of brandnames. (Make it into same format with previous files!)
@@ -30,6 +39,14 @@ You can put the string that you wanna know the core brandname instead of '투썸
     ```python
     file_list = ['purchase_data_7Feb22', 'YOUR NEW FILE NAME']
     ```
-4. Run /core/make_scores.py once, then it makes word scores.
+4. Run /core/make_scores.py once, then it makes word scores. (You don't need to restart the server.)
 
 It saves the dictionary data into a file(scores_dict.pkl). When the API starts the process, it gets word scores from the **pickle file**. It means, the new brandnames are not gonna be considered unless you run make_scores.py even if you put the new dataset files.
+
+## File Description
+- api.py: Script that Python shell runs
+- data_lab.py: Measures accuracy of solution
+- make_scores.py: Considers every datasets and computes cohesion scores - learning
+- scores_dict.pkl: Data file containing cohesion scores
+- read_data.py: Script that reads datasets
+- string_processing.py: Script that tokenizes given string and extracts core brand name
